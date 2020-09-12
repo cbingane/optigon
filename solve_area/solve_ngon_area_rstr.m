@@ -1,3 +1,5 @@
+% 'solve_ngon_area_rstr.m' solves the convex restriction of the maximal
+% area problem constructed around the small n-gon (a,b)
 function [xopt,yopt,Aopt] = solve_ngon_area_rstr(n,a,b)
 cvx_begin
     variables x(n-1) y(n-1)

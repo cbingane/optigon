@@ -1,6 +1,8 @@
+% 'solve_ngon_area.m' solves the maximal area polygon sequentially from an
+% initial small n-gon (a,b)
 function [x,y,A,k,ez,eA] = solve_ngon_area(n)
 if mod(n,2) == 0 && n >= 6
-[a,b] = cstrt_correg_ngon(n);
+[a,b] = cstrt_graham_ngon(n);
 A0 = calc_area_ngon(a,b);
 xi = a; yi = b; Ai = A0;
 figure
