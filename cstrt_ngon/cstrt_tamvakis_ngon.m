@@ -1,3 +1,5 @@
+% 'cstrt_tamvakis_ngon' provides vertices coordinates (a,b) of the Tamvakis
+% small n-gon
 function [a,b] = cstrt_tamvakis_ngon(n)
 if n>=3
     a = zeros(n-1,1); b = a;
