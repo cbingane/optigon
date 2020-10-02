@@ -2,7 +2,7 @@
 
 OPTIGON is a MATLAB-based package for finding extremal small polygons, based on the following paper:
 
-+ C. Bingane. [Largest small polygons: A sequential convex optimization approach](http://www.optimization-online.org/DB_HTML/2020/09/8019.html). 2020.
++ C. Bingane. [Largest small polygons: A sequential convex optimization approach](http://www.optimization-online.org/DB_HTML/2020/09/8019.html). Technical Report G-2020-50, Les cahiers du GERAD, 2020.
 
 ## Basic Requirements
 
