@@ -1,4 +1,4 @@
-% 'cstrt_hansen_ngon' provides vertices coordinates (a,b) of a convex
+% 'cstrt_hansen_ngon' provides the vertices coordinates (a,b) of a convex
 % equilateral small n-gon for n = 2^s and s >= 3
 function [a,b] = cstrt_hansen_ngon(n)
 if mod(log(n),log(2))==0 && n>=8

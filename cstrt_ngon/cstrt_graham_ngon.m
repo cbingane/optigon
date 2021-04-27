@@ -1,5 +1,5 @@
-% 'cstrt_graham_ngon' provides vertices coordinates (a,b) of the initial
-% small n-gon for the maximal area problem
+% 'cstrt_graham_ngon' provides the vertices coordinates (a,b) of a small
+% n-gon for n = 2m and m >= 3
 function [a,b] = cstrt_graham_ngon(n)
 if mod(n,2) == 0 && n>=4
     a = zeros(n-1,1); b = a;

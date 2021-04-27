@@ -1,4 +1,4 @@
-% 'cstrt_audet_ngon' provides vertices coordinates (a,b) of a convex
+% 'cstrt_audet_ngon' provides the vertices coordinates (a,b) of a convex
 % equilateral small n-gon for n = 2^s and s >= 4
 function [a,b] = cstrt_audet_ngon(n)
 if mod(log(n),log(2))==0 && n>=16

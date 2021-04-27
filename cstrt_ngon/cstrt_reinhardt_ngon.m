@@ -1,5 +1,5 @@
-% 'cstrt_reuleaux_ngon' provides vertices coordinates (a,b) of the Reuleaux
-% small m*k-gon
+% 'cstrt_reinhardt_ngon' provides the vertices coordinates (a,b) of a
+% Reinhardt polygon m*k
 function [a,b] = cstrt_reinhardt_ngon(m,k)
 if mod(m,2) == 1 && m>=3 && k>=1
     a = zeros(m*k-1,1); b = a;
