@@ -1,0 +1,5 @@
+# Maximal perimeter: Initial angles of Bn (n >= 8)
+
+data;
+
+let {i in 1..n/4+1} a[i] := pi/n+(-1)^(i-1)*d;
