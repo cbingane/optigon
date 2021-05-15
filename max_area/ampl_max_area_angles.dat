@@ -1,0 +1,8 @@
+# Maximal area: Initial angles
+
+data;
+
+let a[1] := u;
+let a[2] := v+w;
+let a[3] := v-w;
+let {i in 4..n/2} a[i] := v;
