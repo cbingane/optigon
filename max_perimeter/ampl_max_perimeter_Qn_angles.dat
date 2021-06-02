@@ -1,0 +1,5 @@
+# Maximal perimeter: Initial angles of Qn (n >= 4)
+
+data;
+
+let {i in 1..n/2} a[i] := pi/n + (-1)^i*d;
