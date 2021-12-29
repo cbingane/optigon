@@ -1,5 +1,5 @@
 function [a,b] = cstrt_bezdek_ngon(n)
-if mod(log(n),log(2))==0 && n>=16
+if mod(log2(n),1)==0 && n>=16
     % initialization
     syms u
     v = 4*pi/n-3*u;

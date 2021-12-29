@@ -1,5 +1,5 @@
 function [a,b] = cstrt_fodor_ngon(n)
-if mod(log(n),log(2))==0 && n>=8
+if mod(log2(n),1)==0 && n>=8
     % initialization
     syms u
     v = (pi/2-(n/4+1)*u)/(n/4-1);

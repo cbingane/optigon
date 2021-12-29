@@ -1,7 +1,7 @@
 % 'cstrt_hansen_ngon' provides the vertices coordinates (a,b) of a convex
 % equilateral small n-gon for n = 2^s and s >= 3
 function [a,b] = cstrt_hansen_ngon(n)
-if mod(log(n),log(2))==0 && n>=8
+if mod(log2(n),1)==0 && n>=8
     % initialization
     syms t
     eqn = (cos(t)^2+sin((n/2-2)*t)^2-2*cos(t)*sin((n/2-2)*t)^2)/(2*cos(t)^2*(1+sin((n/2-2)*t))) == 4*sin(t/2)^2;

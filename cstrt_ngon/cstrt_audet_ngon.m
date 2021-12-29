@@ -1,7 +1,7 @@
 % 'cstrt_audet_ngon' provides the vertices coordinates (a,b) of a convex
 % equilateral small n-gon for n = 2^s and s >= 4
 function [a,b] = cstrt_audet_ngon(n)
-if mod(log(n),log(2))==0 && n>=16
+if mod(log2(n),1)==0 && n>=16
     % initialization
     syms t
     x = sin(t)-(2*cos(t)-1)*cos((n/4-2)*t)*sin(n*t/4)/cos(2*t);

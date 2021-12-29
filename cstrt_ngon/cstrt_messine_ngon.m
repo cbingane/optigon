@@ -1,5 +1,5 @@
 function [a,b] = cstrt_messine_ngon(n)
-if mod(log(n),log(2))==0 && n>=4
+if mod(log2(n),1)==0 && n>=4
     % initialization
     d = pi/4 - asin(cos(pi/n)/sqrt(2));
     x = zeros(n/2,1);

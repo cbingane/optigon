@@ -1,5 +1,5 @@
 function [a,b] = cstrt_datta_ngon(n)
-if mod(log(n),log(2))==0 && n>=16
+if mod(log2(n),1)==0 && n>=16
     % initialization
     d = atan(tan(2*pi/n)*tan(pi/n))-asin(sin(2*pi/n)^2/sqrt(2+2*cos(2*pi/n)*cos(4*pi/n)));
     x = zeros(3*n/8,1);
