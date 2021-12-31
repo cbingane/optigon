@@ -1,5 +1,5 @@
 function cstrt_messine_ngon(n)
-if isinteger(log2(n)) && n>=4
+if mod(log2(n),1)==0 && n>=4
     # initialization
     d = pi/4 - asin(cos(pi/n)/sqrt(2));
     x = zeros(Int(n/2));
