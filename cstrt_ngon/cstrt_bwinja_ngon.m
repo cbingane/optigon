@@ -5,19 +5,17 @@ if mod(n,2) == 0 && n>=6
     % initialization
     syms u
     v = (pi/2-u)/(n/2-1);
-    w = asin(sin(u)+sin(u+3*v/2)/(2*cos(v/2)))-u-v;
-    A1 = sin(u);
-    A2 = sin(2*v)-sin(v+w);
-    A3f = (n/2-3)*(sin(v)-tan(v/2))+(cos(v-w)-cos(2*v)-1/2)*tan(v/2);
-    A = A1 + A2 + A3f;
+    d = asin(sin(u)+sin(u+3*v/2)/(2*cos(v/2)))-u-v;
+    A = sin(u)+sin(2*v)-sin(v+d)+...
+        (n/2-3)*(sin(v)-tan(v/2))+(cos(v-d)-cos(2*v)-1/2)*tan(v/2);
     f = diff(A);
     u0 = double(vpasolve(f==0,u,[pi/(2*n-2), pi/n]));
     v0 = (pi/2-u0)/(n/2-1);
-    w0 = asin(sin(u0)+sin(u0+3*v0/2)/(2*cos(v0/2)))-u0-v0;
+    d0 = asin(sin(u0)+sin(u0+3*v0/2)/(2*cos(v0/2)))-u0-v0;
     x = zeros(n/2,1);
     x(1) = u0;
-    x(2) = v0+w0;
-    x(3) = v0-w0;
+    x(2) = v0+d0;
+    x(3) = v0-d0;
     if n >= 8
         x(4:end) = v0;
     end
