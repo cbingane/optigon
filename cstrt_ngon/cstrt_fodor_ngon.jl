@@ -25,15 +25,17 @@ if mod(log2(n),1)==0 && n>=8
     a = zeros(n-1); b = zeros(n-1);
     a[Int(n/2-1)] = p[1]; a[Int(n/2+1)] = -a[Int(n/2-1)];
     b[Int(n/2-1)] = q[1]; b[Int(n/2+1)] = b[Int(n/2-1)];
-    for i = 2:n/4-1
-        a[Int(mod(i*(n/2-1),n))] = p[i];
-        a[Int(n-mod(i*(n/2-1),n))] = -a[Int(mod(i*(n/2-1),n))];
-        b[Int(mod(i*(n/2-1),n))] = q[i];
-        b[Int(n-mod(i*(n/2-1),n))] = b[Int(mod(i*(n/2-1),n))];
-        a[Int(mod((i-1)*(n/2-1)+n/2,n))] = a[Int(mod((i-1)*(n/2-1),n))] - (-1)^i*sin(sum(x[1:i-1])+v0);
-        a[Int(n-mod((i-1)*(n/2-1)+n/2,n))] = -a[Int(mod((i-1)*(n/2-1)+n/2,n))];
-        b[Int(mod((i-1)*(n/2-1)+n/2,n))] = b[Int(mod((i-1)*(n/2-1),n))] - (-1)^i*cos(sum(x[1:i-1])+v0);
-        b[Int(n-mod((i-1)*(n/2-1)+n/2,n))] = b[Int(mod((i-1)*(n/2-1)+n/2,n))];
+    if n>=16
+        for i = 2:Int(n/4-1)
+            a[Int(mod(i*(n/2-1),n))] = p[i];
+            a[Int(n-mod(i*(n/2-1),n))] = -a[Int(mod(i*(n/2-1),n))];
+            b[Int(mod(i*(n/2-1),n))] = q[i];
+            b[Int(n-mod(i*(n/2-1),n))] = b[Int(mod(i*(n/2-1),n))];
+            a[Int(mod((i-1)*(n/2-1)+n/2,n))] = a[Int(mod((i-1)*(n/2-1),n))] - (-1)^i*sin(sum(x[1:i-1])+v0);
+            a[Int(n-mod((i-1)*(n/2-1)+n/2,n))] = -a[Int(mod((i-1)*(n/2-1)+n/2,n))];
+            b[Int(mod((i-1)*(n/2-1)+n/2,n))] = b[Int(mod((i-1)*(n/2-1),n))] - (-1)^i*cos(sum(x[1:i-1])+v0);
+            b[Int(n-mod((i-1)*(n/2-1)+n/2,n))] = b[Int(mod((i-1)*(n/2-1)+n/2,n))];
+        end
     end
     a[Int(3*n/4)] = p[Int(n/4)]; a[Int(n/4)] = -a[Int(3*n/4)];
     b[Int(3*n/4)] = q[Int(n/4)]; b[Int(n/4)] = b[Int(3*n/4)];
