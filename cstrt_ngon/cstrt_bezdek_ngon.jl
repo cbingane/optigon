@@ -1,3 +1,8 @@
+# 'cstrt_bezdek_ngon' provides the vertices coordinates (a,b) of a convex
+# equilateral small n-gon for n = 2^s and s >= 4
+# Please, cite...
+#   C. Bingane and C. Audet. The equilateral small octagon of maximal
+#   width. Mathematics of Computation, 2022.
 function cstrt_bezdek_ngon(n)
 if mod(log2(n),1)==0 && n>=16
     # initialization

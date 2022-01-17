@@ -1,3 +1,9 @@
+# 'cstrt_fodor_ngon' provides the vertices coordinates (a,b) of a convex
+# equilateral small n-gon for n = 2^s and s >= 3
+# The 8-gon has maximal width among all equilateral small 8-gons
+# Please, cite...
+#   C. Bingane and C. Audet. The equilateral small octagon of maximal
+#   width. Mathematics of Computation, 2022.
 function cstrt_fodor_ngon(n)
 if mod(log2(n),1)==0 && n>=8
     # initialization
