@@ -1,12 +1,19 @@
-% 'cstrt_hansen_ngon' provides the vertices coordinates (a,b) of a convex
+% 'cstrt_vincze_ngon' provides the vertices coordinates (a,b) of a convex
 % equilateral small n-gon for n = 2^s and s >= 3
-function [a,b] = cstrt_hansen_ngon(n)
+% The 8-gon has maximal perimeter among all convex equilateral small 8-gons
+% Please, cite...
+%   C. Bingane and C. Audet. Tight bounds on the maximal perimeter of
+%   convex equilateral small polygons. Technical Report G-2021-31, Les
+%   Cahiers du GERAD, 2021.
+%   C. Audet, P. Hansen, F. Messine, and S. Perron. The minimum diameter
+%   octagon with unit-length sides: Vincze's wife octagon is suboptimal.
+%   Journal of Combinatorial Theory, Series A, 108(1): 63-75, 2004.
+function [a,b] = cstrt_vincze_ngon(n)
 if mod(log2(n),1)==0 && n>=8
     % initialization
     syms t
     eqn = (cos(t)^2+sin((n/2-2)*t)^2-2*cos(t)*sin((n/2-2)*t)^2)/(2*cos(t)^2*(1+sin((n/2-2)*t))) == 4*sin(t/2)^2;
-    s = vpasolve(eqn,t,[0,pi/n]);
-    z = double(s);
+    z = double(vpasolve(eqn,t,[0,pi/n]));
     % construction
     a = zeros(n-1,1); b = a;
     for i = 1:n/4-1
