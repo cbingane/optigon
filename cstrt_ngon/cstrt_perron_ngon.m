@@ -1,13 +1,16 @@
 % 'cstrt_audet_ngon' provides the vertices coordinates (a,b) of a convex
 % equilateral small n-gon for n = 2^s and s >= 4
-function [a,b] = cstrt_audet_ngon(n)
+% Please, cite...
+%   C. Bingane and C. Audet. Tight bounds on the maximal perimeter of
+%   convex equilateral small polygons. Technical Report G-2021-31, Les
+%   cahiers du GERAD, 2021.
+function [a,b] = cstrt_perron_ngon(n)
 if mod(log2(n),1)==0 && n>=16
     % initialization
     syms t
     x = sin(t)-(2*cos(t)-1)*cos((n/4-2)*t)*sin(n*t/4)/cos(2*t);
     eqn = (2*x+sin((n/2-1)*t))^2 + cos((n/2-1)*t)^2 == 4*sin(t/2)^2;
-    s = vpasolve(eqn,t,[0,pi/n]);
-    z = double(s);
+    z = double(vpasolve(eqn,t,[0,pi/n]));
     % construction
     a = zeros(n-1,1); b = a;
     a(n/2-1) = sin(z); a(n/2+1) = -a(n/2-1);
