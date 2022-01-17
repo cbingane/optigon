@@ -1,6 +1,12 @@
-% 'cstrt_bwinja_ngon' provides the vertices coordinates (a,b) of a small
+% 'cstrt_bieri_ngon' provides the vertices coordinates (a,b) of a small
 % n-gon for n = 2m and m >= 3
-function [a,b] = cstrt_bwinja_ngon(n)
+% The 6-gon has maximal area among all small 6-gons
+% Please, cite...
+%   C. Bingane. Tight bounds on the maximal area of small polygons:
+%   Improved Mossinghoff polygons. Discrete & Computational Geometry, 2022.
+%   M. J. Mossinghoff. Isodiametric problems for polygons. Discrete &
+%   Computational Geometry, 36(2): 363-379, 2006.
+function [a,b] = cstrt_bieri_ngon(n)
 if mod(n,2) == 0 && n>=6
     % initialization
     syms u
