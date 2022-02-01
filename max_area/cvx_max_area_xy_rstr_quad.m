@@ -1,7 +1,8 @@
-% 'solve_ngon_area_rstr.m' solves a convex restriction of the maximal
+% 'cvx_max_area_xy_rstr_quad.m' solves a convex restriction of the maximal
 % area problem constructed around an n-gon (a,b)
-function [xopt,yopt,Aopt] = solve_ngon_area_rstr(n,a,b)
+function [xopt,yopt] = cvx_max_area_xy_rstr_quad(n,a,b)
 cvx_begin
+%     cvx_solver_settings('MSK_IPAR_INTPNT_SOLVE_FORM', 'MSK_SOLVE_DUAL');
     variables x(n-1) y(n-1)
     variable u(n-2)
     maximize sum(u)
@@ -19,12 +20,10 @@ cvx_begin
         % counterclockwise order and area
         for i = 1:n-2
             u(i) >= 0
-            (x(i+1) + y(i))^2 + (y(i+1) - x(i))^2 + 8*u(i) <= ...
-                2*(a(i+1) - b(i))*(x(i+1) - y(i)) - (a(i+1) - b(i))^2 + ...
-                2*(b(i+1) + a(i))*(y(i+1) + x(i)) - (b(i+1) + a(i))^2
+            (x(i)-y(i+1))^2+(y(i)+x(i+1))^2+8*u(i) <= ...
+                2*(a(i)+b(i+1))*(x(i)+y(i+1))-(a(i)+b(i+1))^2 + ...
+                2*(b(i)-a(i+1))*(y(i)-x(i+1))-(b(i)-a(i+1))^2
         end
-        % lower bound
-%         sum(u) >= calc_area_ngon(a,b)
 cvx_end
-xopt = x; yopt = y; Aopt = calc_area_ngon(xopt,yopt);
+xopt = x; yopt = y;
 end
