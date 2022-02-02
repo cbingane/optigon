@@ -8,7 +8,7 @@ if mod(n,2) == 0 && n>=8
     A(u) = sin(u[1])+sin(2*u[2])-sin(u[2]+d(u))+
     (n/2-3)*(sin(v(u))-tan(v(u)/2))+(cos(u[2]-d(u))-cos(2*u[2])-1/2)*tan(v(u)/2);
     F(u) = -A(u);
-    res = optimize(F,[pi/(2*n-2), pi/(n-1)],LBFGS());
+    res = Optim.optimize(F,[pi/(2*n-2), pi/(n-1)],LBFGS());
     u0, w0 = Optim.minimizer(res);
     v0 = (pi/2-u0-2*w0)/(n/2-3);
     d0 = asin(sin(u0)+sin(u0+2*w0-v0/2)/(2*cos(v0/2)))-u0-w0;

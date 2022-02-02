@@ -14,7 +14,7 @@ if mod(n,2) == 0 && n>=6
     A(u) = sin(u)+sin(2*v(u))-sin(v(u)+d(u))+
     (n/2-3)*(sin(v(u))-tan(v(u)/2))+(cos(v(u)-d(u))-cos(2*v(u))-1/2)*tan(v(u)/2);
     F(u) = -A(u);
-    res = optimize(F,pi/(2*n-2),pi/n);
+    res = Optim.optimize(F,pi/(2*n-2),pi/n);
     u0 = Optim.minimizer(res);
     v0 = (pi/2-u0)/(n/2-1);
     d0 = asin(sin(u0)+sin(u0+3*v0/2)/(2*cos(v0/2)))-u0-v0;
