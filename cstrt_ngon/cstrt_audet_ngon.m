@@ -2,9 +2,8 @@
 % equilateral small n-gon for n = 2^s and s >= 4
 % Please, cite...
 %   C. Bingane and C. Audet. Tight bounds on the maximal perimeter of
-%   convex equilateral small polygons. Technical Report G-2021-31, Les
-%   cahiers du GERAD, 2021.
-function [a,b] = cstrt_perron_ngon(n)
+%   convex equilateral small polygons. Archiv der Mathematik, 2022.
+function [a,b] = cstrt_audet_ngon(n)
 if mod(log2(n),1)==0 && n>=16
     % initialization
     syms t

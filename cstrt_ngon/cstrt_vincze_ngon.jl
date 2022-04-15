@@ -3,8 +3,7 @@
 # The 8-gon has maximal perimeter among all convex equilateral small 8-gons
 # Please, cite...
 #   C. Bingane and C. Audet. Tight bounds on the maximal perimeter of
-#   convex equilateral small polygons. Technical Report G-2021-31, Les
-#   cahiers du GERAD, 2021.
+#   convex equilateral small polygons. Archiv  der Mathematik, 2022.
 #   C. Audet, P. Hansen, F. Messine, and S. Perron. The minimum diameter
 #   octagon with unit-length sides: Vincze's wife octagon is suboptimal.
 #   Journal of Combinatorial Theory, Series A, 108(1): 63-75, 2004.

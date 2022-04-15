@@ -1,5 +1,13 @@
 # 'cstrt_xiong_ngon' provides the vertices coordinates (a,b) of a small
 # n-gon for n = 2m and m >= 4
+# The 8-gon has maximal area among all small 8-gons
+# Please, cite...
+#   C. Bingane and M. J. Mossinghoff. Small polygons with large area.
+#   arXiv preprint arXiv:2204.04547, 2022.
+#   C. Bingane. Tight bounds on the maximal area of small polygons:
+#   Improved Mossinghoff polygons. Discrete & Computational Geometry, 2022.
+#   M. J. Mossinghoff. Isodiametric problems for polygons. Discrete &
+#   Computational Geometry, 36(2): 363-379, 2006.
 function cstrt_xiong_ngon(n)
 if mod(n,2) == 0 && n>=8
     # initialization
