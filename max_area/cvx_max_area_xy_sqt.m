@@ -1,5 +1,8 @@
 % 'cvx_max_area_xy_sqt.m' solves the maximal area problem sequentially from an
 % initial n-gon (a,b)
+% Please, cite...
+%   C. Bingane. Largest small polygons: A sequential convex optimization
+%   approach. Optimization Letters, 2022.
 function [x,y,A,k,ez,eA] = cvx_max_area_xy_sqt(n)
 if mod(n,2) == 0 && n >= 6
 [a,b] = cstrt_graham_ngon(n);

@@ -1,5 +1,8 @@
 % 'cvx_max_area_xy_rstr_quad.m' solves a convex restriction of the maximal
 % area problem constructed around an n-gon (a,b)
+% Please, cite...
+%   C. Bingane. Largest small polygons: A sequential convex optimization
+%   approach. Optimization Letters, 2022.
 function [xopt,yopt] = cvx_max_area_xy_rstr_quad(n,a,b)
 cvx_begin
 %     cvx_solver_settings('MSK_IPAR_INTPNT_SOLVE_FORM', 'MSK_SOLVE_DUAL');

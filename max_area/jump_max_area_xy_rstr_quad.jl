@@ -1,5 +1,8 @@
 # 'jump_max_area_xy_rstr_quad' solves a convex restriction of the maximal
 # area problem constructed around an n-gon (a,b)
+# Please, cite...
+#   C. Bingane. Largest small polygons: A sequential convex optimization
+#   approach. Optimization Letters, 2022.
 function jump_max_area_xy_rstr_quad(n,a,b)
     if mod(n,2)==0 && n>=6
         #model = Model(Ipopt.Optimizer)
