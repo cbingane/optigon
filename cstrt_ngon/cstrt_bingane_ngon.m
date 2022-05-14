@@ -1,3 +1,9 @@
+% 'cstrt_bingane_ngon' provides the vertices coordinates (a,b) of a convex
+% small n-gon for n = 2^s and s >= 3
+% The 8-gon has maximal width among all convex small 8-gons
+% Please, cite...
+%   C. Bingane. Tight bounds on the maximal perimeter and the maximal width
+%   of convex small polygons. Journal of Global Optimization, 2022.
 function [a,b] = cstrt_bingane_ngon(n)
 if mod(log2(n),1)==0 && n>=8
     % initialization

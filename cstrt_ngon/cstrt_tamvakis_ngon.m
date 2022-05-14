@@ -3,6 +3,8 @@
 % Please, cite...
 %   N. K. Tamvakis. On the perimeter and the area of the convex polygon of
 %   a given diameter. Bull. Greek Math. Soc, 28: 115-132, 1987.
+%   C. Bingane. Tight bounds on the maximal perimeter and the maximal width
+%   of convex small polygons. Journal of Global Optimization, 2022.
 function [a,b] = cstrt_tamvakis_ngon(n)
 if n>=3
     a = zeros(n-1,1); b = a;
