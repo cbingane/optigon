@@ -1,11 +1,11 @@
-% 'cstrt_messine_ngon' provides the vertices coordinates (a,b) of a convex
+% 'cstrt_taylor_ngon' provides the vertices coordinates (a,b) of a convex
 % small n-gon for n = 2^s and s >= 2
 % The 4-gon has maximal area, maximal perimeter and maximal width among all
 % convex small 4-gons
 % Please, cite...
 %   C. Bingane. Tight bounds on the maximal perimeter and the maximal width
 %   of convex small polygons. Journal of Global Optimization, 2022.
-function [a,b] = cstrt_messine_ngon(n)
+function [a,b] = cstrt_taylor_ngon(n)
 if mod(log2(n),1)==0 && n>=4
     % initialization
     d = pi/4 - asin(cos(pi/n)/sqrt(2));
