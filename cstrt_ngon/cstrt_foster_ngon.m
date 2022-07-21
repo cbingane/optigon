@@ -9,7 +9,7 @@
 %   M. J. Mossinghoff. Isodiametric problems for polygons. Discrete &
 %   Computational Geometry, 36(2): 363-379, 2006.
 function [a,b] = cstrt_foster_ngon(n)
-if mod(n,2) == 0 && n>=10
+if mod(n,2)==0 && n>=10
     % initialization
     syms u w1 d1
     v = (pi/2-u-2*w1)/(n/2-3);
@@ -32,7 +32,9 @@ if mod(n,2) == 0 && n>=10
     x(1) = u0;
     x(2) = w10+d10; x(3) = w10-d10;
     x(4) = v0+d20; x(5) = v0-d20;
-    x(6:end) = v0;
+    if n>=12
+        x(6:end) = v0;
+    end
     % construction
     a = zeros(n-1,1); b = a;
     a(n/2-1) = sin(x(1)); a(n/2+1) = -a(n/2-1);

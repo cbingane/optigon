@@ -7,7 +7,7 @@
 %   M. J. Mossinghoff. Isodiametric problems for polygons. Discrete &
 %   Computational Geometry, 36(2): 363-379, 2006.
 function [a,b] = cstrt_bieri_ngon(n)
-if mod(n,2) == 0 && n>=6
+if mod(n,2)==0 && n>=6
     % initialization
     syms u
     v = (pi/2-u)/(n/2-1);
@@ -22,7 +22,7 @@ if mod(n,2) == 0 && n>=6
     x(1) = u0;
     x(2) = v0+d0;
     x(3) = v0-d0;
-    if n >= 8
+    if n>=8
         x(4:end) = v0;
     end
     % construction
