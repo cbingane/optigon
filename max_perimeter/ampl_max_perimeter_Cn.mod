@@ -1,8 +1,8 @@
-# Convex small n-gon Dn (n >= 16): Maximal perimeter
+# Convex small n-gon Cn (n >= 16): Maximal perimeter
 
 model;
 
-param n := 16;
+param n := 128;
 param pi := 4*atan(1);
 param d := atan(tan(2*pi/n)*tan(pi/n))-asin(sin(2*pi/n)^2/sqrt(2+2*cos(2*pi/n)*cos(4*pi/n)));
 param Ll := 2*n*sin(pi/(2*n))*cos(d/2);

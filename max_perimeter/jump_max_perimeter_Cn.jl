@@ -1,4 +1,4 @@
-function jump_max_perimeter_Dn(n)
+function jump_max_perimeter_Cn(n)
     if mod(log2(n),1)==0 && n>=16
         d = atan(tan(2*pi/n)*tan(pi/n))-asin(sin(2*pi/n)^2/sqrt(2+2*cos(2*pi/n)*cos(4*pi/n)));
         Ll = 2*n*sin(pi/(2*n))*cos(d/2);
