@@ -1,6 +1,6 @@
 # 'cstrt_szabo_ngon' provides the vertices coordinates (a,b) of a small
 # n-gon for even n >= 12
-# The 8-gon has maximal area among all small 8-gons
+# The 12-gon has maximal area among all small 12-gons
 # Please, cite...
 #   C. Bingane and M. J. Mossinghoff. Small polygons with large area.
 #   arXiv preprint arXiv:2204.04547, 2022.
