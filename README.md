@@ -7,7 +7,7 @@ OPTIGON is a package in MATLAB and Julia for finding extremal small polygons, ba
 + C. Bingane. [Maximal perimeter and maximal width of a convex small polygon](https://www.researchgate.net/publication/353070519_Maximal_perimeter_and_maximal_width_of_a_convex_small_polygon). Technical Report G-2021-33, *Les cahiers du GERAD*, 2021.
 + C. Bingane and C. Audet. [Tight bounds on the maximal perimeter of convex equilateral small polygons](https://doi.org/10.1007/s00013-022-01745-x). *Archiv der Mathematik*, 119(3), 325-336, 2022.
 + C. Bingane and C. Audet. [The equilateral small octagon of maximal width](https://doi.org/10.1090/mcom/3733). *Mathematics of Computation*, 91(336), 2027-2040, 2022.
-+ C. Bingane. [Tight bounds on the maximal area of small polygons: Improved Mossinghoff polygons](https://doi.org/10.1007/s00454-022-00374-z). *Discrete & Computational Geometry*, 2022.
++ C. Bingane. [Tight bounds on the maximal area of small polygons: Improved Mossinghoff polygons](https://doi.org/10.1007/s00454-022-00374-z). *Discrete & Computational Geometry*, 70(1), 236-248, 2023.
 + C. Bingane and M. J. Mossinghoff. [Small polygons with large area](https://www.researchgate.net/publication/359890368_Small_polygons_with_large_area). *ArXiv Preprint* arXiv:2204.04547, 2022.
 
 ## Basic Requirements
