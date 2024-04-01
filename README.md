@@ -2,7 +2,7 @@
 
 OPTIGON is a package in MATLAB and Julia for finding extremal small polygons, based on the following papers:
 
-+ C. Bingane and M. J. Mossinghoff. [Small polygons with large area](https://doi.org/10.1007/s10898-023-01329-1). *Journal of Global Optimization*, 2023.
++ C. Bingane and M. J. Mossinghoff. [Small polygons with large area](https://doi.org/10.1007/s10898-023-01329-1). *Journal of Global Optimization*, 88(4), 1035-1050, 2024.
 + C. Bingane. [Tight bounds on the maximal area of small polygons: Improved Mossinghoff polygons](https://doi.org/10.1007/s00454-022-00374-z). *Discrete & Computational Geometry*, 70(1), 236-248, 2023.
 + C. Bingane. [Largest small polygons: A sequential convex optimization approach](https://doi.org/10.1007/s11590-022-01887-5). *Optimization Letters*, 17(2), 385-397, 2023.
 + C. Bingane. [Tight bounds on the maximal perimeter and the maximal width of convex small polygons](https://doi.org/10.1007/s10898-022-01181-9). *Journal of Global Optimization*, 84(4), 1033-1051, 2022.
